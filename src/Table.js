@@ -2,6 +2,7 @@ import React, * as react from 'react'
 class Table extends react.Component {
     render() {
         const { characterData, removeCharacter } = this.props
+        
         return (
             <table>
                 <TableHeader />
