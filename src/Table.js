@@ -2,7 +2,7 @@ import React, * as react from 'react'
 class Table extends react.Component {
     render() {
         const { characterData, removeCharacter } = this.props
-        
+
         return (
             <table>
                 <TableHeader />
@@ -19,6 +19,7 @@ const TableHeader = () => {
             <tr>
                 <th>Name</th>
                 <th>Job</th>
+                <th>&nbsp;</th>
             </tr>
         </thead>
     )
