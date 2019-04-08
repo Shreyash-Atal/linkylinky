@@ -40,7 +40,7 @@ class Form extends Component {
                 <input type="text" name="description" className="form-control" value={description} onChange={this.handleChange} />
 
                 <label htmlFor="url">Link / URL/ Web Address</label>
-                <input type="text" name="url" className="form-control" value={url} onChange={this.handleChange} />
+                <input type="url" name="url" className="form-control" value={url} onChange={this.handleChange} />
 
                 <input type="button" value="Submit" onClick={this.submitForm} />
             </form>
