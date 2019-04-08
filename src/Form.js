@@ -4,8 +4,13 @@ class Form extends Component {
         super(props);
 
         this.initialState = {
-            name: '',
-            job: ''
+            title: '',
+            description: '',
+            url: '',
+            formErrors: {title: '', description: '', url: ''},
+            nameValid: false,
+            descriptionValid: false,
+            formValid: false
         }
 
         this.state = this.initialState;
@@ -25,14 +30,17 @@ class Form extends Component {
     }
 
     render() {
-        const { name, job } = this.state;
+        const { title, description, url } = this.state;
         return (
             <form>
-                <label>Name</label>
-                <input type="text" name="name" value={name} onChange={this.handleChange} />
+                <label htmlFor="title">Title</label>
+                <input type="text" name="title" className = "form-control" value={title} onChange={this.handleChange} />
 
-                <label>Job</label>
-                <input type="text" name="job" value={job} onChange={this.handleChange} />
+                <label htmlFor="description">Description</label>
+                <input type="text" name="description" className="form-control" value={description} onChange={this.handleChange} />
+
+                <label htmlFor="url">Link / URL/ Web Address</label>
+                <input type="text" name="url" className="form-control" value={url} onChange={this.handleChange} />
 
                 <input type="button" value="Submit" onClick={this.submitForm} />
             </form>
